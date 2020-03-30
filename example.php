@@ -6,10 +6,15 @@
  *    прокинуть кодировку после определения ??
  *    учесть случаи с регистром и без ??
  */
+
+//не успел поиграться с namespace aliasами для auoload,
 require_once("src/ns_load.php");
 use src\NeedleFinder;
 
 $filepath   = "https://raw.githubusercontent.com/ArthurGi/hooli/master/files/news.txt";
+
+//третьим параметров в NeedleFinder можно прокинуть сво класс поиска,
+//главное чтобы он имплементил SearchInterface
 $ns = new NeedleFinder($filepath, true);
 $str = 'on';
 $text_coords = $ns->search($str);
