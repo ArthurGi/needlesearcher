@@ -14,17 +14,27 @@ class NeedleFinder
     private $file;
 
     /** @var SearchInterface  */
-    private $seacher;
+    private $searcher;
 
-    public function __construct(string $filePath, bool $isRemote, $searcher = null)
+
+    public function __construct(string $filePath, bool $isRemote, SearchInterface $searcher = null)
     {
         $this->file    = $this->getFileObject($filePath, $isRemote);
-        $this->seacher = $this->getSearcher($searcher);
+        $this->file->setConfig();
+        if (!$this->file->validate()) {
+            var_dump('Error file size|mime-type');die;
+        }
+
+        $this->searcher = $this->getSearcher($searcher);
     }
 
-    public function search(string $needle)
+    /**
+     * @param string $needle
+     * @return array
+     */
+    public function search(string $needle): array
     {
-        return $this->file->readSearch($this->seacher ,$needle);
+        return $this->file->readSearch($this->searcher ,$needle) ?? [];
     }
 
     /**
@@ -53,4 +63,5 @@ class NeedleFinder
 
         return new $searcher;
     }
+
 }
