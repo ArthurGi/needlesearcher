@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Acer
- * Date: 29.03.2020
- * Time: 14:42
- */
+
 namespace src\Classes;
 
 final class LocalFile extends AbstractFile

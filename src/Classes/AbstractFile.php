@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Acer
- * Date: 30.03.2020
- * Time: 11:51
- */
 
 namespace src\Classes;
 
