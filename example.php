@@ -12,7 +12,6 @@ require_once("src/ns_load.php");
 use src\NeedleFinder;
 
 $filepath   = "https://raw.githubusercontent.com/ArthurGi/hooli/master/files/news.txt";
-
 //третьим параметров в NeedleFinder можно прокинуть сво класс поиска,
 //главное чтобы он имплементил SearchInterface
 $ns = new NeedleFinder($filepath, true);
