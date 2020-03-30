@@ -1,0 +1,12 @@
+{
+    "name": "arturg/needlefinder",
+    "description": "test project for find needle string in some file",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Artur Gilmanov",
+            "email": "artur.gilmanov.93@mail.ru"
+        }
+    ],
+    "require": {}
+}
