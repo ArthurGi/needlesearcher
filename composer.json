@@ -2,6 +2,7 @@
     "name": "arturg/needlefinder",
     "description": "test project for find needle string in some file",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Artur Gilmanov",
